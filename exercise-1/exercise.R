@@ -25,4 +25,6 @@ games$won <- games$diff > 0
 ## Add the vector of opponents into the data frame
 games$opponents <- c("Dallas Cowboys", "Atlanta Falcons", "Greenbay Packers", "Oppo4", "Oppo5")
 
+rownames(games) <- opponents
+games
 

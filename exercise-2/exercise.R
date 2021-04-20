@@ -1,10 +1,10 @@
 # Create a vector of 100 employees ("Employee 1", "Employee 2", ... "Employee 100")
 
-
+employees <- paste("Employee", 1:100)
 ## Create a random vector of 2014 salaries.
 ## Hint: you may use the runif function to create uniform random numbers,
 ## e.g. runif(100, 50, 100) creates 100 random numbers between 50 and 100
-
+salaries.2014 <- runif(100, 50000, 100000)
 
 ## Create a vector of 2015 salaries that are typically higher than the 2014
 ## salaires (use runif again).
@@ -13,13 +13,14 @@
 ## a positive number.
 ## However, please ensure the 2015 results include both larger and smaller numbers than
 ## 2014 results.
-
+salaries.2015 <-runif(100, -100000, 300000)
 
 ## Create a data.frame 'salaries' by combining the vectors you just made
-
+salaries <- data.frame(employees, salaries.2014, salaries.2015)
+salaries
 
 ## Create a column 'raise' that stores the size of the raise between 2014 and 2015
-
+salaries$raise <- salaries.2015 - salaries.2014
 
 ## Create a column 'got.raise' that is TRUE if the person got a raise
 
